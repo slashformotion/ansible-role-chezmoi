@@ -31,7 +31,7 @@
         chezmoi_repo: "https://github.com/kilip/molecule-dotfiles.git"
     - name: cleanup existing chezmoi dir
       file:
-        path: "/home/{{ chezmoi_user }} /.local/share/chezmoi"
+        path: "/home/{{ chezmoi_user }}/.local/share/chezmoi"
         state: absent
     - name: testing with empty repo
       include_role:
