@@ -33,6 +33,7 @@
       file:
         path: "/home/{{ chezmoi_user }}/.local/share/chezmoi"
         state: absent
+      changed_when: false
     - name: testing with empty repo
       include_role:
         name: "kilip.chezmoi"
