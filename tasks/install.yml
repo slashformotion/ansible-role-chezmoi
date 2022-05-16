@@ -1,0 +1,33 @@
+- name: chezmoi ~> update apt cache.
+  apt: update_cache=yes cache_valid_time=600
+  when: ansible_os_family == "Debian"
+
+- name: chezmoi ~> ensure required package installed
+  package:
+    name:
+      - git
+      - curl
+    state: present
+
+- name: installing chezmoi
+  block:
+    - name: chezmoi ~> downloading chezmoi
+      get_url:
+        url: "{{ chezmoi_get_url }}"
+        dest: "{{ chezmoi_user_home }}/chezmoi_get"
+        mode: "0775"
+    - name: chezmoi ~> cloning git repo
+      git:
+        repo: "{{ chezmoi_repo }}"
+        dest: "{{ chezmoi_target }}"
+        single_branch: yes
+        version: main
+      register: git_stat
+      changed_when: false
+    - name: chezmoi ~> initializing
+      command:
+        cmd: "sh -c {{ chezmoi_user_home }}/chezmoi_get init --apply"
+        chdir: "/home/{{ chezmoi_user }}"
+      changed_when: false
+  become: true
+  become_user: "{{ chezmoi_user }}"
