@@ -1,11 +1,9 @@
 ---
 name: Release
 on:
-  push:
-    tags:
-      - '*'
-  schedule:
-    - cron: '10 10 10 * *'
+  release:
+    types:
+      - published
 
 defaults:
   run:
