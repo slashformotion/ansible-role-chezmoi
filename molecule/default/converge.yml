@@ -1,0 +1,43 @@
+---
+- name: Converge
+  hosts: all
+  pre_tasks:
+    - name: chezmoi ~> update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == "Debian"
+    - name: ensure required package installed
+      package:
+        name:
+          - bash
+          - bash-completion
+        state: present
+    - name: group ~> ensure group {{ chezmoi_user }} exists
+      group:
+        name: "{{ chezmoi_user }}"
+        state: present
+    - name: user ~> ensure user {{ chezmoi_user }} exists
+      user:
+        name: "{{ chezmoi_user }}"
+        state: present
+        group: "{{ chezmoi_user }}"
+        create_home: true
+        home: "/home/{{ chezmoi_user }}"
+        shell: "/usr/bin/bash"
+  tasks:
+    - name: testing with repo url
+      include_role:
+        name: "kilip.chezmoi"
+      vars:
+        chezmoi_repo: "https://github.com/kilip/molecule-dotfiles.git"
+    - name: cleanup existing chezmoi dir
+      file:
+        path: "/home/{{ chezmoi_user }} /.local/share/chezmoi"
+        state: absent
+    - name: testing with empty repo
+      include_role:
+        name: "kilip.chezmoi"
+      vars:
+        chezmoi_repo: "https://github.com/kilip/not-nexists.git"
+  vars:
+    chezmoi_user: toni
+

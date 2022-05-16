@@ -1,0 +1,14 @@
+---
+# Based on ansible-lint config
+extends: default
+rules:
+  line-length:
+    max: 200
+    level: warning
+  new-line-at-end-of-file: disable
+  truthy: disable
+
+ignore: |
+  .github
+  .travis.yml
+  venv

@@ -1,0 +1,6 @@
+---
+chezmoi_user: "{{ ansible_env.USER }}"
+chezmoi_repo: ""
+chezmoi_get_url: "http://chezmoi.io/get"
+
+chezmoi_install_dir: "/home/{{ chezmoi_user }}/.local/share/chezmoi"

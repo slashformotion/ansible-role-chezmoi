@@ -1,0 +1,7 @@
+skip_list:
+  - 'yaml'
+  - 'risky-shell-pipe'
+  - 'role-name'
+  - 'fqcn-builtins'
+  - 'risky-file-permissions'
+  - 'deprecated-local-action'

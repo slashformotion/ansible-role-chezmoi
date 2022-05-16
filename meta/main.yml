@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: Anthonius Munthi
+  namespace: kilip
+  role_name: chezmoi
+  description: Install and configure chezmoi installation
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+        - bionic
+    - name: EL
+      versions:
+        - 9
+        - 8
+        - 7
+    - name: Debian
+      versions:
+        - 12
+        - 11
+        - 10
+  galaxy_tags:
+    - ssh
+    - system
+    - user
+dependencies: []
