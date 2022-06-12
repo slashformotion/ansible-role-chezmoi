@@ -23,21 +23,10 @@
         create_home: true
         home: "/home/{{ chezmoi_user }}"
         shell: "/usr/bin/bash"
-  tasks:
-    - name: testing with repo url
-      include_role:
-        name: "kilip.chezmoi"
-      vars:
-        chezmoi_repo: "https://github.com/kilip/molecule-dotfiles.git"
     - name: cleanup existing chezmoi dir
       file:
-        path: "/home/{{ chezmoi_user }}/.local/share/chezmoi"
+        path: "{{ chezmoi_target }}"
         state: absent
       changed_when: false
-    - name: testing with empty repo
-      include_role:
-        name: "kilip.chezmoi"
-      vars:
-        chezmoi_repo: "https://github.com/kilip/not-nexists.git"
-  vars:
-    chezmoi_user: toni
+  roles:
+    - kilip.chezmoi

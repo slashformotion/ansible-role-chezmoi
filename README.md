@@ -24,7 +24,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: all
       roles:
-         - role: kilip.ssh
+         - role: kilip.chezmoi
 
 License
 -------

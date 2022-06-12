@@ -1,0 +1,326 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+Makefile:7: *** missing separator.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Jun 12 16:31:43 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.1668
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0bcfdfaf-ddea-42d8-9b1c-7cb4ee5f1f32.sock
+# environment
+LC_NAME = id_ID.UTF-8
+# environment
+LC_NUMERIC = id_ID.UTF-8
+# environment
+VSCODE_CWD = /home/toni
+# environment
+WINDOWPATH = 2
+# environment
+all_proxy = http://proxy.itstoni.com:3128
+# environment
+LC_ADDRESS = id_ID.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+PYENV_SHELL = fish
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/toni/project/ansible/roles/kilip.chezmoi
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/regolith:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/toni/.local/share
+# environment
+http_proxy = http://proxy.itstoni.com:3128
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/toni/.config/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# environment
+PHPBREW_HOME = /home/toni/.phpbrew
+# environment
+HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+PHPBREW_ROOT = /home/toni/.phpbrew
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/toni/project/ansible/roles/kilip.chezmoi
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPOSER_BIN_PATH = /home/toni/.composer/vendor/bin
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-regolith:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+OMF_PATH = /home/toni/.local/share/omf
+# environment
+XDG_SESSION_DESKTOP = regolith
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 2625
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+HTTPS_PROXY = http://proxy.itstoni.com:3128
+# environment
+SESSION_MANAGER = local/zeus:@/tmp/.ICE-unix/1241,unix/zeus:/tmp/.ICE-unix/1241
+# automatic
+*F = $(notdir $*)
+# environment
+MANPATH = /home/linuxbrew/.linuxbrew/share/man:/home/linuxbrew/.linuxbrew/share/man:
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+HTTP_PROXY = http://proxy.itstoni.com:3128
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+ftp_proxy = http://proxy.itstoni.com:3128
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# environment
+INFOPATH = /home/linuxbrew/.linuxbrew/share/info:/home/linuxbrew/.linuxbrew/share/info:
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 2
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/toni/.pyenv/shims:/home/toni/.pyenv/libexec/pyenv:/home/toni/.pyenv/libexec:/home/toni/.pyenv/bin:/home/toni/.phpbrew/bin:/home/toni/.composer/vendor/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/toni/.pyenv/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/toni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LC_MONETARY = id_ID.UTF-8
+# automatic
+^F = $(notdir $^)
+# environment
+PHPBREW_BIN = /home/toni/.phpbrew/bin
+# environment
+LC_TIME = id_ID.UTF-8
+# environment
+COMPIZ_CONFIG_PROFILE = gnome-flashback
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = toni
+# environment
+LC_TELEPHONE = id_ID.UTF-8
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_AUTOSTART_ID = 1090a93493b84a238e165500891393154800000012410016
+# environment
+XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = regolith
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# environment
+PYENV_ROOT = /home/toni/.pyenv
+# environment
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = toni
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile
+.DEFAULT_GOAL := converge
+# environment
+SYSTEMD_EXEC_PID = 1091
+# environment
+DISPLAY = :0
+# environment
+USER = toni
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+FTP_PROXY = http://proxy.itstoni.com:3128
+# environment
+COMPOSER_BIN = /home/linuxbrew/.linuxbrew/bin/composer
+# environment
+HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
+# environment
+LC_MEASUREMENT = id_ID.UTF-8
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2625
+# environment
+_ = /usr/bin/i3
+# environment
+LC_PAPER = id_ID.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/toni
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-68decbd1-1.68.0-main.sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+https_proxy = http://proxy.itstoni.com:3128
+# environment
+ALL_PROXY = http://proxy.itstoni.com:3128
+# environment
+XDG_MENU_PREFIX = gnome-flashback-
+# environment
+GDMSESSION = regolith
+# environment
+LC_IDENTIFICATION = id_ID.UTF-8
+# environment
+OMF_CONFIG = /home/toni/.config/omf
+# variable set hash-table stats:
+# Load=122/1024=12%, Rehash=0, Collisions=11/136=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64771, inode 8401985): 21 files, no impossibilities.
+
+# 21 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+verify:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+converge:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 4):
+	molecule converge
+
+# Not a target:
+Makefile:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=6/1024=1%, Rehash=0, Collisions=0/7=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 28 / storage = 245 B / avg = 8 B
+# current buf: size = 8162 B / used = 245 B / count = 28 / avg = 8 B
+
+# strcache performance: lookups = 34 / hit rate = 17%
+# hash-table stats:
+# Load=28/8192=0%, Rehash=0, Collisions=0/34=0%
+# Finished Make data base on Sun Jun 12 16:31:43 2022
+
+ 

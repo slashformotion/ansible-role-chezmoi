@@ -1,0 +1,8 @@
+- name: Verify chezmoi install
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Include verify tasks
+      ansible.builtin.include_role:
+        name: "kilip.chezmoi"
+        tasks_from: verify.yml

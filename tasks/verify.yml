@@ -1,0 +1,20 @@
+---
+- name: Check chezmoi_bin stat
+  ansible.builtin.stat:
+    path: "{{ chezmoi_bin }}"
+  register: "_chezmoi_bin"
+- name: Check chezmoi_target stat
+  ansible.builtin.stat:
+    path: "{{ chezmoi_target }}"
+  register: "_chezmoi_target"
+
+
+- name: Ensure dirs/file created
+  ansible.builtin.assert:
+    that: item.stat.exists
+    quiet: true
+  loop_control:
+    label: "{{ item.stat.path }}"
+  loop:
+    - "{{ _chezmoi_bin }}"
+    - "{{ _chezmoi_target }}"

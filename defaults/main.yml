@@ -1,8 +1,9 @@
 ---
 chezmoi_user: ""
 chezmoi_repo: ""
-chezmoi_get_url: "http://chezmoi.io/get"
+chezmoi_version: "2.17.1"
+chezmoi_url: "https://github.com/twpayne/chezmoi/releases/download/v2.17.1/chezmoi_2.17.1_linux_amd64.deb"
 
 chezmoi_user_home: "/home/{{ chezmoi_user }}"
 chezmoi_bin: "{{ chezmoi_user_home }}/bin/chezmoi"
-chezmoi_target: "/{{ chezmoi_user_home }}/.local/share/chezmoi"
+chezmoi_target: "{{ chezmoi_user_home }}/.local/share/chezmoi"
