@@ -12,10 +12,6 @@ platforms:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
-lint: |
-  set -e
-  ansible-lint
-
 provisioner:
   name: ansible
   log: true

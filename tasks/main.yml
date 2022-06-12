@@ -18,10 +18,16 @@
         creates: "{{ chezmoi_bin }}"
         chdir: "{{ chezmoi_user_home }}"
 
+    - name: Check existing chezmoi dotfiles
+      ansible.builtin.stat:
+        path: "{{ chezmoi_target }}"
+      register: _chezmoi_target
+
     - name: Initializing existing chezmoi repo
       ansible.builtin.command:
         cmd: "{{ chezmoi_bin }} init --apply {{ chezmoi_repo }}"
         chdir: "{{ chezmoi_user_home }}"
-        creates: "{{ chezmoi_target }}"
+      when: not _chezmoi_target.stat.exists
+
   become: true
   become_user: "{{ chezmoi_user }}"
