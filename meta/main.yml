@@ -5,7 +5,7 @@ galaxy_info:
   role_name: chezmoi
   description: Install and configure chezmoi installation
   license: MIT
-  min_ansible_version: 2.1
+  min_ansible_version: "2.9"
   platforms:
     - name: Ubuntu
       versions:
@@ -14,9 +14,9 @@ galaxy_info:
         - bionic
     - name: EL
       versions:
-        - 9
-        - 8
-        - 7
+        - "9"
+        - "8"
+        - "7"
     - name: Debian
       versions:
         - bullseye
