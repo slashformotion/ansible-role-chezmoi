@@ -1,9 +1,34 @@
 ---
-- name: chezmoi ~> get current install stat
-  stat:
-    path: "{{ chezmoi_bin }}"
-  register: reg_chezmoi
+- name: Ensure apt cache updated
+  apt: update_cache=yes cache_valid_time=600
+  when: ansible_os_family == "Debian"
 
-- name: chezmoi ~> install
-  include_tasks: install.yml
-  when: not reg_chezmoi.stat.exists
+- name: Ensure required package installed
+  package:
+    name:
+      - git
+      - curl
+    state: present
+
+- name: Ensure chezmoi installed and initialized
+  block:
+    - name: Execute chezmoi scripts
+      ansible.builtin.shell:
+        cmd: sh -c "$(curl -fsLS chezmoi.io/get)"
+        creates: "{{ chezmoi_bin }}"
+        chdir: "{{ chezmoi_user_home }}"
+
+    - name: Check existing chezmoi dotfiles
+      ansible.builtin.stat:
+        path: "{{ chezmoi_target }}"
+      register: _chezmoi_target
+
+    - name: Initializing existing chezmoi repo
+      ansible.builtin.command:
+        cmd: "{{ chezmoi_bin }} init --apply {{ chezmoi_repo }}"
+        chdir: "{{ chezmoi_user_home }}"
+      when: false == _chezmoi_target.stat.exists
+      changed_when: false
+
+  become: true
+  become_user: "{{ chezmoi_user }}"

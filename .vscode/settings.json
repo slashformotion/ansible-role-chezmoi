@@ -1,0 +1,10 @@
+{
+  "ansible.ansibleLint.enabled": true,
+  "ansible.ansible.path": "ansible",
+  "files.associations": {
+    "**/tasks/**/*.yml": "ansible",
+    "**/vars/**/*.yml": "ansible",
+    "**/defaults/**/*.yml": "ansible",
+    "**/molecule/**/playbooks/*.yml": "ansible"
+  }
+}

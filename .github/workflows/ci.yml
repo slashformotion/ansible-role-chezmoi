@@ -4,21 +4,28 @@ on:
   push:
     branches: [main]
   pull_request:
-    types: [opened, reopened, edited, synchronize]
     branches:
       - main
+
+defaults:
+  run:
+    working-directory: 'kilip.chezmoi'
+
 jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          path: kilip.chezmoi
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: '3.10'
+          cache: pip
 
       - name: Install test dependencies.
         run: pip3 install yamllint
@@ -38,17 +45,21 @@ jobs:
           - centos-7
           - ubuntu-22.04
           - ubuntu-20.04
+          - ubuntu-18.04
           - debian-11
           - debian-10
           - debian-9
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          path: kilip.chezmoi
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: "3.10"
+          cache: pip
 
       - name: Install test dependencies.
         run:
@@ -56,8 +67,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Molecule tests.
-        run: molecule test
+        run: make test
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.distro }}
+          MOLECULE_DIST: ${{ matrix.distro }}

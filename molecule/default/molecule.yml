@@ -5,16 +5,12 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: ansible-role-chezmoi
+  - name: instance
     image: "kilip/molecule-${MOLECULE_DISTRO:-ubuntu-22.04}:latest"
     pre_build_image: true
     privileged: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-
-lint: |
-  set -e
-  ansible-lint
 
 provisioner:
   name: ansible
@@ -22,8 +18,10 @@ provisioner:
   env:
     GITHUB_TOKEN: ${MOLECULE_GITHUB_TOKEN:-""}
   playbooks:
-    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+    converge: "playbooks/${MOLECULE_PLAYBOOK:-converge.yml}"
+    verify: "playbooks/verify.yml"
   config_opt:
-    remote_tmp: "/tmp/ansible"
+    remote_tmp: "/tmp/ansible-${USER}"
+
 verifier:
-  name: testinfra
+  name: ansible

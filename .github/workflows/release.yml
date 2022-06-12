@@ -2,29 +2,28 @@
 name: Release
 on:
   release:
-    types:
-      - published
+    types: [published]
 
 defaults:
   run:
-    working-directory: 'kilip.ssh'
+    working-directory: 'kilip.chezmoi'
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          path: 'kilip.ssh'
+          path: 'kilip.chezmoi'
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: '3.x'
 
       - name: Install Ansible.
-        run: pip install ansible
+        run: pip3 install ansible
 
       - name: Trigger a new import on Galaxy.
         run: >-
