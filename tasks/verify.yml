@@ -8,7 +8,6 @@
     path: "{{ chezmoi_target }}"
   register: "_chezmoi_target"
 
-
 - name: Ensure dirs/file created
   ansible.builtin.assert:
     that: item.stat.exists

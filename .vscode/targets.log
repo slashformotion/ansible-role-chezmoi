@@ -1,5 +1,5 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-Makefile:7: *** missing separator.  Stop.
+make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
@@ -8,7 +8,7 @@ Makefile:7: *** missing separator.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 12 16:31:43 2022
+# Make data base, printed on Sun Jun 12 17:03:46 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
 # environment
 I3SOCK = /run/user/1000/i3/ipc-socket.1668
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0bcfdfaf-ddea-42d8-9b1c-7cb4ee5f1f32.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1aaaa9d4-5557-4291-8077-b7953f56a0b7.sock
 # environment
 LC_NAME = id_ID.UTF-8
 # environment
@@ -87,7 +87,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 COMPOSER_BIN_PATH = /home/toni/.composer/vendor/bin
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -188,7 +188,7 @@ DESKTOP_SESSION = regolith
 ORIGINAL_XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
 # environment
 PYENV_ROOT = /home/toni/.pyenv
-# environment
+# 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = toni
@@ -257,7 +257,7 @@ LC_IDENTIFICATION = id_ID.UTF-8
 # environment
 OMF_CONFIG = /home/toni/.config/omf
 # variable set hash-table stats:
-# Load=122/1024=12%, Rehash=0, Collisions=11/136=8%
+# Load=122/1024=12%, Rehash=0, Collisions=11/152=7%
 
 # Pattern-specific Variable Values
 
@@ -279,8 +279,9 @@ verify:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 7):
+	molecule verify
 
- 
 converge:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -290,9 +291,11 @@ converge:
 
 # Not a target:
 Makefile:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-06-12 16:32:15.289905246
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -303,24 +306,38 @@ Makefile:
 # Not a target:
 all:
 #  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+destroy:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 10):
+	molecule destroy
+
+test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 13):
+	molecule test
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/7=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/18=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 245 B / avg = 8 B
-# current buf: size = 8162 B / used = 245 B / count = 28 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 258 B / avg = 8 B
+# current buf: size = 8162 B / used = 258 B / count = 30 / avg = 8 B
 
-# strcache performance: lookups = 34 / hit rate = 17%
+# strcache performance: lookups = 38 / hit rate = 21%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=0/34=0%
-# Finished Make data base on Sun Jun 12 16:31:43 2022
+# Load=30/8192=0%, Rehash=0, Collisions=0/38=0%
+# Finished Make data base on Sun Jun 12 17:03:46 2022
 
  

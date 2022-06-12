@@ -1,6 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/toni/project/ansible/roles/kilip.chezmoi'
+molecule converge
 make: Leaving directory '/home/toni/project/ansible/roles/kilip.chezmoi'
  
-Makefile:7: *** missing separator.  Stop.
-
